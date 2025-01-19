@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>interact with phone</title>
+    <script>
+        function open_media(){
+
+            document.location.href = "server-file/";
+        }
+        function folder_upload(){
+            document.location.href = 'folder.html'
+        }
+        function Zip_maker() {
+                document.location.href = 'zipconvert.php'
+            }
+    </script>
+
+    <style>
+        body {
+            font-size: xx-large;
+        }
+        button {
+            font-size: xx-large;
+        }
+
+        .in1 {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+       
+        <form class="f1" action="save_mp4.php" method="post" enctype="multipart/form-data">
+            <label for="file"><span>Choose File to Upload :</span></label>
+            <input class="in1" type="file" name="file" id="file" />
+            <br><br><br>
+            <input class="in1" type="submit" name="submit" value="Submit" />
+        </form>
+
+        <br><br><br>
+
+        To download available file click here  : 
+        <button type="button" onclick="open_media()" >media </button>
+        <br><br><br>
+        To Upload folder click here 
+        <button type="button" onclick="folder_upload()">upload_folder</button>
+
+        <br><br><br>
+        To make zip file of folder enter folder name here
+        <form action="zipconvert.php" method="post">
+
+            foldername : 
+            <input type="text" name="foldername"/>
+
+            <button type="submit" value="submit">make zip</button>
+
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>
